@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/pages/first_page.dart';
+import 'package:flutter_application_2/pages/second_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,20 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> names = ['Dara', 'Dara', 'dara'];
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: ListView.builder(
-          itemCount: names.length, // Use the length of the list
-          itemBuilder: (BuildContext context, int index) {
-            return ListTile(
-              title: Text(names[index]), // Pass the correct `index`
-            );
-          },
-        ),
-      ),
+      home: FirstPage(),
+      routes: {
+        '/secondpage': (context) => SecondPage(),
+        '/firstpage': (context) => FirstPage(),
+      },
     );
   }
 }
