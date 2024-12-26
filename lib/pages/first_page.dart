@@ -1,8 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/pages/second_page.dart';
+import 'package:flutter_application_2/pages/home.dart';
+import 'package:flutter_application_2/pages/profile.dart';
+import 'package:flutter_application_2/pages/settings.dart';
 
-class FirstPage extends StatelessWidget {
-  const FirstPage({super.key});
+class FirstPage extends StatefulWidget {
+  FirstPage({super.key});
+
+  @override
+  State<FirstPage> createState() => _FirstPageState();
+}
+
+class _FirstPageState extends State<FirstPage> {
+  void _navigate(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  int _selectedIndex = 0;
+
+  final List _pages = [
+    // homepage
+    Home(),
+    // profile
+    Profile(),
+    // settings
+    Settings(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +40,10 @@ class FirstPage extends StatelessWidget {
         ),
         backgroundColor: Colors.deepPurple,
       ),
+      body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: _navigate,
         items: [
           // home
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
