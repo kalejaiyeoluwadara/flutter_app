@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/pages/first_page.dart';
-import 'package:flutter_application_2/pages/home.dart';
-import 'package:flutter_application_2/pages/second_page.dart';
-import 'package:flutter_application_2/pages/settings.dart';
+import 'package:flutter_application_2/pages/counter.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,14 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: FirstPage(),
-      routes: {
-        '/secondpage': (context) => SecondPage(),
-        '/firstpage': (context) => FirstPage(),
-        '/home': (context) => Home(),
-        '/settings': (context) => Settings(),
-      },
+      home: CounterPage(),
     );
   }
 }
