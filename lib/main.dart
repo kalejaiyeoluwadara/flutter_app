@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/pages/todo.dart';
+import 'package:flutter_application_2/pages/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: TodoApp(),
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+      theme: ThemeData(primarySwatch: Colors.yellow),
     );
   }
 }
