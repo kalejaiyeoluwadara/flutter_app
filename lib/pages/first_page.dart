@@ -16,31 +16,16 @@ class FirstPage extends StatelessWidget {
         ),
         backgroundColor: Colors.deepPurple,
       ),
-      drawer: Drawer(
-        backgroundColor: Colors.deepPurple[200],
-        child: Column(
-          children: [
-            DrawerHeader(
-              child: Icon(Icons.favorite),
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('HOME'),
-              onTap: () => {
-                Navigator.pop(context),
-                Navigator.pushNamed(context, '/home')
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('SETTINGS'),
-              onTap: () => {
-                Navigator.pop(context),
-                Navigator.pushNamed(context, '/settings')
-              },
-            ),
-          ],
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          // home
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          // profile
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          // settings
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings), label: 'Settings'),
+        ],
       ),
     );
   }
