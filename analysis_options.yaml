@@ -1,3 +1,6 @@
+analyzer:
+  errors:
+    avoid_unnecessary_containers: ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:
