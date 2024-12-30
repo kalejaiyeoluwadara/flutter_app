@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/models/cart.dart';
-import 'package:flutter_application_2/pages/intro_page.dart';
+import 'package:flutter_application_2/pages/TutorialPage.dart';
+// import 'package:flutter_application_2/pages/intro_page.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
         create: (context) => Cart(),
         builder: (context, child) => MaterialApp(
               debugShowCheckedModeBanner: false,
-              home: IntroPage(),
+              // home: IntroPage(),
+              home: Tutorialpage(),
             ));
   }
 }
