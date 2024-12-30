@@ -1,6 +1,7 @@
 analyzer:
   errors:
     avoid_unnecessary_containers: ignore
+    must_be_immutable: ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:
