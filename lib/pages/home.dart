@@ -48,7 +48,7 @@ class Home extends StatelessWidget {
               child: Divider(),
             ),
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24.0),
+              padding: EdgeInsets.only(top: 44.0, bottom: 0, left: 24),
               child: Text(
                 'Fresh Items',
                 style: TextStyle(fontSize: 16),
@@ -68,7 +68,10 @@ class Home extends StatelessWidget {
                     itemName: value.shopItems[index][0],
                     itemPrice: value.shopItems[index][1],
                     imagePath: value.shopItems[index][2],
-                    onPress: () {},
+                    onPress: () {
+                      Provider.of<CartModel>(context, listen: false)
+                          .addItemToCart(index);
+                    },
                     color: null,
                   );
                 },
