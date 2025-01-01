@@ -28,7 +28,7 @@ class Tutorialpage extends StatelessWidget {
       child: Scaffold(
           body: Column(
         children: [
-          Container(
+          SizedBox(
             height: 120,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
