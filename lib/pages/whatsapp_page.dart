@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/chat_list.dart';
-import 'package:flutter_application_2/components/archived.dart';
+import 'package:flutter_application_2/pages/calls_page.dart';
 import 'package:flutter_application_2/pages/chats_page.dart';
+import 'package:flutter_application_2/pages/communities_page.dart';
+import 'package:flutter_application_2/pages/updates_page.dart';
 
 class WhatsappPage extends StatefulWidget {
   const WhatsappPage({super.key});
@@ -16,10 +17,9 @@ class _WhatsappPageState extends State<WhatsappPage> {
   // List of widgets for the pages corresponding to each bottom nav item
   final List<Widget> _pages = [
     ChatsPage(),
-    Center(child: Text('Updates Page', style: TextStyle(color: Colors.white))),
-    Center(
-        child: Text('Communities Page', style: TextStyle(color: Colors.white))),
-    Center(child: Text('Calls Page', style: TextStyle(color: Colors.white))),
+    UpdatesPage(),
+    CommunitiesPage(),
+    CallsPage(),
   ];
 
   // Method to handle navigation
